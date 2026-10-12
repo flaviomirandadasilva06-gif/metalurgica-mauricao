@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metalúrgica do Maurição | Soluções em Metal e Serralheria</title>
+  <meta name="description" content="Metalúrgica do Maurição - Portões sob medida, carretinhas, grades de proteção, estruturas metálicas, corrimãos e soldas. Qualidade e precisão em cada projeto. Solicite seu orçamento.">
+  <meta name="keywords" content="metalúrgica, serralheria, portões, carretinhas, grades, estruturas metálicas, Maurição, Recanto dos Pássaros">
+  <link rel="icon" type="image/png" href="logo-mauricao.png">
+  <link rel="apple-touch-icon" href="logo-mauricao.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'industrial-black': '#0a0a0a',
+            'graphite': '#1a1a1a',
+            'metal-gray': '#2d2d2d',
+            'steel': '#3f3f3f',
+            'gold': '#d4a017',
+            'gold-light': '#f0c040',
+            'fire-orange': '#e85d04',
+            'spark': '#ffba08',
+          },
+          fontFamily: {
+            'display': ['Oswald', 'sans-serif'],
+            'body': ['Inter', 'sans-serif'],
+          },
+          backgroundImage: {
+            'metal-texture': "url('data:image/svg+xml,%3Csvg viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cfilter id=\"noise\"%3E%3CfeTurbulence type=\"fractalNoise\" baseFrequency=\"0.65\" numOctaves=\"3\" stitchTiles=\"stitch\"/%3E%3C/filter%3E%3Crect width=\"100%25\" height=\"100%25\" filter=\"url(%23noise)\" opacity=\"0.08\"/%3E%3C/svg%3E')",
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    .font-display { font-family: 'Oswald', sans-serif; letter-spacing: 0.02em; }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0a0a0a; }
+    ::-webkit-scrollbar-thumb { background: #d4a017; border-radius: 4px; }
+    
+    /* Floating WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      animation: pulse-glow 2s infinite;
+    }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+      50% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+    }
+    
+    /* Hover cards */
+    .service-card { transition: all 0.3s ease; }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(212, 160, 23, 0.15); }
+    
+    /* Gallery lightbox */
+    .lightbox { display: none; }
+    .lightbox.active { display: flex; }
+    
+    /* Accordion */
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .faq-item.open .faq-answer { max-height: 300px; }
+    .faq-item.open .faq-icon { transform: rotate(180deg); }
+    
+    /* Mobile menu */
+    .mobile-menu { transform: translateX(100%); transition: transform 0.3s ease; }
+    .mobile-menu.open { transform: translateX(0); }
+    
+    /* Gradient text */
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #f0c040, #d4a017, #e85d04);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Section divider */
+    .section-glow {
+      background: radial-gradient(ellipse at center, rgba(212,160,23,0.08) 0%, transparent 70%);
+    }
+  </style>
+</head>
+<body class="bg-industrial-black text-white antialiased">
+
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-industrial-black/95 backdrop-blur-md border-b border-gold/20 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <!-- Logo -->
+        <a href="#inicio" class="flex items-center group">
+          <img src="logo-mauricao.png" 
+               alt="Metalúrgica Maurição" 
+               class="h-12 md:h-14 w-auto object-contain group-hover:scale-105 transition-transform drop-shadow-lg">
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="#inicio" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Início</a>
+          <a href="#empresa" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">A Empresa</a>
+          <a href="#servicos" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Serviços</a>
+          <a href="#trabalhos" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Nossos Trabalhos</a>
+          <a href="#contato" class="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Contato</a>
+          <a href="https://wa.me/5577998208831?text=Ol%C3%A1!%20Conheci%20o%20site%20da%20Metal%C3%BArgica%20do%20Mauri%C3%A7%C3%A3o%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." 
+             target="_blank" rel="noopener"
+             class="ml-2 px-5 py-2.5 bg-gradient-to-r from-gold to-fire-orange text-black font-display font-semibold text-sm tracking-wide rounded-md hover:shadow-lg hover:shadow-gold/40 transition-all">
+            PEDIR ORÇAMENTO
+          </a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button id="menu-btn" class="lg:hidden p-2 text-gold" aria-label="Abrir menu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-72 bg-graphite border-l border-gold/30 z-50 lg:hidden">
+      <div class="flex flex-col h-full p-6">
+        <div class="flex justify-end mb-8">
+          <button id="close-menu" class="p-2 text-gold" aria-label="Fechar menu">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-6">
+          <a href="#inicio" class="mobile-link text-lg font-medium text-gray-200 hover:text-gold">Início</a>
+          <a href="#empresa" class="mobile-link text-lg font-medium text-gray-200 hover:text-gold">A Empresa</a>
+          <a href="#servicos" class="mobile-link text-lg font-medium text-gray-200 hover:text-gold">Serviços</a>
+          <a href="#trabalhos" class="mobile-link text-lg font-medium text-gray-200 hover:text-gold">Nossos Trabalhos</a>
+          <a href="#contato" class="mobile-link text-lg font-medium text-gray-200 hover:text-gold">Contato</a>
+          <a href="https://wa.me/5577998208831?text=Ol%C3%A1!%20Conheci%20o%20site%20da%20Metal%C3%BArgica%20do%20Mauri%C3%A7%C3%A3o%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." 
+             target="_blank" rel="noopener"
+             class="mt-4 px-5 py-3 bg-gradient-to-r from-gold to-fire-orange text-black font-display font-semibold text-center rounded-md">
+            PEDIR ORÇAMENTO
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div id="menu-overlay" class="fixed inset-0 bg-black/60 z-40 hidden lg:hidden"></div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section id="inicio" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <!-- Background - Soldagem de estrutura (mais aparente) -->
+    <div class="absolute inset-0 z-0">
+      <img src="bg-soldagem-estrutura.png" 
+           alt="Soldagem de estrutura metálica" 
+           class="w-full h-full object-cover object-[center_30%] opacity-75">
+      <!-- Gradiente só na esquerda para legibilidade do texto, direita mais aberta -->
+      <div class="absolute inset-0 bg-gradient-to-r from-industrial-black/95 via-industrial-black/55 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-industrial-black/70 via-transparent to-industrial-black/30"></div>
+    </div>
+
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <div class="max-w-2xl text-left">
+        <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full border border-gold/40 bg-gold/10">
+          <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+          <span class="text-xs font-medium text-gold tracking-wider uppercase">Soluções em Metal</span>
+        </div>
+        
+        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 text-left">
+          <span class="text-white">METALÚRGICA</span><br>
+          <span class="text-gold-gradient">DO MAURIÇÃO</span>
+        </h1>
+        
+        <p class="font-display text-xl sm:text-2xl md:text-3xl text-gold-light font-medium mb-6 tracking-wide text-left">
+          FORÇA, PRECISÃO E QUALIDADE EM CADA PROJETO.
+        </p>
+        
+        <p class="text-gray-200 text-base md:text-lg max-w-xl mb-10 leading-relaxed text-left">
+          Portões, estruturas metálicas, grades, corrimãos, carretinhas e soluções sob medida para transformar seu projeto em realidade.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-start">
+          <a href="https://wa.me/5577998208831?text=Ol%C3%A1!%20Conheci%20o%20site%20da%20Metal%C3%BArgica%20do%20Mauri%C3%A7%C3%A3o%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." 
+             target="_blank" rel="noopener"
+             class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-gold to-fire-orange text-black font-display font-bold text-base tracking-wide rounded-md hover:shadow-xl hover:shadow-gold/30 transition-all">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            SOLICITAR ORÇAMENTO
+          </a>
+          <a href="#servicos" 
+             class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-gold/60 text-gold font-display font-semibold text-base tracking-wide rounded-md hover:bg-gold/10 transition-all">
+            CONHECER NOSSOS SERVIÇOS
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+      <svg class="w-6 h-6 text-gold/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ========== DIFERENCIAIS ========== -->
+  <section class="relative py-16 md:py-20 bg-graphite border-y border-gold/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <!-- Diferencial 1 -->
+        <div class="flex flex-col items-center text-center p-6 rounded-xl bg-metal-gray/50 border border-steel/50 hover:border-gold/40 transition-colors">
+          <div class="w-14 h-14 mb-4 rounded-full bg-gold/15 flex items-center justify-center">
+            <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-white mb-2">Projetos sob medida</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">Soluções adaptadas às necessidades de cada cliente.</p>
+        </div>
+        <!-- Diferencial 2 -->
+        <div class="flex flex-col items-center text-center p-6 rounded-xl bg-metal-gray/50 border border-steel/50 hover:border-gold/40 transition-colors">
+          <div class="w-14 h-14 mb-4 rounded-full bg-gold/15 flex items-center justify-center">
+            <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-white mb-2">Atenção aos detalhes</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">Cuidado com medidas, encaixes e acabamento.</p>
+        </div>
+        <!-- Diferencial 3 -->
+        <div class="flex flex-col items-center text-center p-6 rounded-xl bg-metal-gray/50 border border-steel/50 hover:border-gold/40 transition-colors">
+          <div class="w-14 h-14 mb-4 rounded-full bg-gold/15 flex items-center justify-center">
+            <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-white mb-2">Diversidade de serviços</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">Diferentes possibilidades em fabricação e serralheria.</p>
+        </div>
+        <!-- Diferencial 4 -->
+        <div class="flex flex-col items-center text-center p-6 rounded-xl bg-metal-gray/50 border border-steel/50 hover:border-gold/40 transition-colors">
+          <div class="w-14 h-14 mb-4 rounded-full bg-gold/15 flex items-center justify-center">
+            <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-white mb-2">Atendimento personalizado</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">Contato direto para entender cada projeto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVIÇOS ========== -->
+  <section id="servicos" class="relative py-20 md:py-28 section-glow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="text-gold text-sm font-semibold tracking-widest uppercase">O que fazemos</span>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-2 mb-4">NOSSOS SERVIÇOS</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Projetos sob medida, acabamento completo e materiais de alta durabilidade para garantir segurança e sofisticação.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        
+        <!-- Carretinhas - Destaque -->
+        <div class="service-card group relative rounded-2xl overflow-hidden bg-metal-gray border border-steel/60 md:col-span-2 lg:col-span-1">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="servico-carretinhas.png" 
+                 alt="Carretinha metálica sob medida" 
+                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-gold mb-2">Fabricação de Carretinhas</h3>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">Carretinhas metálicas sob medida para transporte, com estrutura reforçada e acabamento de qualidade.</p>
+            <a href="https://wa.me/5577998208831?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20carretinha." 
+               target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-gold-light transition-colors">
+              SOLICITAR ORÇAMENTO
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Portões -->
+        <div class="service-card group relative rounded-2xl overflow-hidden bg-metal-gray border border-steel/60">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="servico-portoes.png" 
+                 alt="Portões sob medida" 
+                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-gold mb-2">Portões sob medida</h3>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">Portões de correr, basculantes, de abrir e sociais. Modelos personalizados para sua residência ou empresa.</p>
+            <a href="https://wa.me/5577998208831?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20port%C3%A3o." 
+               target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-gold-light transition-colors">
+              SOLICITAR ORÇAMENTO
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Grades -->
+        <div class="service-card group relative rounded-2xl overflow-hidden bg-metal-gray border border-steel/60">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="servico-grades.png" 
+                 alt="Grades de proteção" 
+                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-gold mb-2">Grades de proteção</h3>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">Grades para janelas e portas, estruturas de proteção, cercamentos e divisórias metálicas.</p>
+            <a href="https://wa.me/5577998208831?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20grades%20de%20prote%C3%A7%C3%A3o." 
+               target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-gold-light transition-colors">
+              SOLICITAR ORÇAMENTO
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Escadas -->
+        <div class="service-card group relative rounded-2xl overflow-hidden bg-metal-gray border border-steel/60">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="servico-escadas.png" 
+                 alt="Escadas metálicas" 
+                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-gold mb-2">Escadas metálicas</h3>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">Escadas sob medida com estrutura resistente e design funcional para residências e empresas.</p>
+            <a href="https://wa.me/5577998208831?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20escada%20met%C3%A1lica." 
+               target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-gold-light transition-colors">
+              SOLICITAR ORÇAMENTO
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Corrimãos -->
+        <div class="service-card group relative rounded-2xl overflow-hidden bg-metal-gray border border-steel/60">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="servico-corrimaos.png" 
+                 alt="Corrimãos e Guarda-corpos" 
+                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-gold mb-2">Corrimãos e Guarda-corpos</h3>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">Corrimãos metálicos, guarda-corpos para escadas e proteções para sacadas com acabamento sofisticado.</p>
+            <a href="https://wa.me/5577998208831?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20corrim%C3%A3o." 
+               target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-gold-light transition-colors">
+              SOLICITAR ORÇAMENTO
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Estruturas -->
+        <div class="service-card group relative rounded-2xl overflow-hidden bg-metal-gray border border-steel/60">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="servico-estruturas.png" 
+                 alt="Estruturas metálicas" 
+                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-gold mb-2">Estruturas metálicas</h3>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">Estruturas para construções, vigas, pilares, galpões, suportes e bases metálicas.</p>
+            <a href="https://wa.me/5577998208831?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20estrutura%20met%C3%A1lica." 
+               target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-gold-light transition-colors">
+              SOLICITAR ORÇAMENTO
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Soldas e Reparos -->
+        <div class="service-card group relative rounded-2xl overflow-hidden bg-metal-gray border border-steel/60">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="servico-soldas.png" 
+                 alt="Soldas e Reparos" 
+                 class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-bold text-gold mb-2">Soldas e Reparos</h3>
+            <p class="text-gray-400 text-sm mb-4 leading-relaxed">Reparos em estruturas metálicas, soldagem de peças, ajustes em portões e manutenção.</p>
+            <a href="https://wa.me/5577998208831?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20solda%20ou%20reparo." 
+               target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-gold-light transition-colors">
+              SOLICITAR ORÇAMENTO
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALERIA ========== -->
+  <section id="trabalhos" class="relative py-20 md:py-28 bg-graphite">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-gold text-sm font-semibold tracking-widest uppercase">Portfólio</span>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-2 mb-4">CONHEÇA NOSSOS TRABALHOS</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Cada projeto tem suas particularidades. Confira exemplos de soluções em metal e trabalhos de serralheria.</p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="flex flex-wrap justify-center gap-3 mb-10">
+        <button class="filter-btn active px-4 py-2 rounded-full text-sm font-medium border border-gold/50 bg-gold/20 text-gold transition-all" data-filter="all">Todos</button>
+        <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-steel text-gray-400 hover:border-gold/50 hover:text-gold transition-all" data-filter="portoes">Portões</button>
+        <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-steel text-gray-400 hover:border-gold/50 hover:text-gold transition-all" data-filter="grades">Grades</button>
+        <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-steel text-gray-400 hover:border-gold/50 hover:text-gold transition-all" data-filter="estruturas">Estruturas</button>
+        <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium border border-steel text-gray-400 hover:border-gold/50 hover:text-gold transition-all" data-filter="outros">Outros</button>
+      </div>
+
+      <!-- Grid -->
+      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div class="gallery-item cursor-pointer group relative aspect-[4/3] rounded-xl overflow-hidden" data-category="portoes">
+          <img src="portoes-01.jpg" alt="Portões sob medida - trabalho de serralheria" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white font-medium">Portões sob medida</span>
+          </div>
+        </div>
+        <div class="gallery-item cursor-pointer group relative aspect-[4/3] rounded-xl overflow-hidden" data-category="portoes">
+          <img src="portoes-02.jpg" alt="Portões sob medida - trabalho de serralheria" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white font-medium">Portões sob medida</span>
+          </div>
+        </div>
+        <div class="gallery-item cursor-pointer group relative aspect-[4/3] rounded-xl overflow-hidden" data-category="portoes">
+          <img src="portoes-03.jpg" alt="Portões sob medida - trabalho de serralheria" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white font-medium">Portões sob medida</span>
+          </div>
+        </div>
+        <div class="gallery-item cursor-pointer group relative aspect-[4/3] rounded-xl overflow-hidden" data-category="portoes">
+          <img src="portoes-04.jpg" alt="Portões sob medida - trabalho de serralheria" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white font-medium">Portões sob medida</span>
+          </div>
+        </div>
+        <div class="gallery-item cursor-pointer group relative aspect-[4/3] rounded-xl overflow-hidden" data-category="portoes">
+          <img src="portoes-05.jpg" alt="Portões sob medida - trabalho de serralheria" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white font-medium">Portões sob medida</span>
+          </div>
+        </div>
+        <div class="gallery-item cursor-pointer group relative aspect-[4/3] rounded-xl overflow-hidden" data-category="portoes">
+          <img src="portoes-06.jpg" alt="Portões sob medida - trabalho de serralheria" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white font-medium">Portões sob medida</span>
+          </div>
+        </div>
+        <div class="gallery-item cursor-pointer group relative aspect-[4/3] rounded-xl overflow-hidden" data-category="portoes">
+          <img src="portoes-07.jpg" alt="Portões sob medida - trabalho de serralheria" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white font-medium">Portões sob medida</span>
+          </div>
+        </div>
+        <div class="gallery-item cursor-pointer group relative aspect-[4/3] rounded-xl overflow-hidden" data-category="portoes">
+          <img src="portoes-08.jpg" alt="Portões sob medida - trabalho de serralheria" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white font-medium">Portões sob medida</span>
+          </div>
+        </div>
+        <div class="gallery-item gallery-video cursor-pointer group relative aspect-[4/3] rounded-xl overflow-hidden" data-category="portoes" data-video="portoes-01.mp4">
+          <img src="portoes-01-thumb.jpg" alt="Portões sob medida - trabalho de serralheria" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+            <div class="w-14 h-14 rounded-full bg-gold/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-black ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 pointer-events-none">
+            <span class="text-white font-medium">Portões sob medida</span>
+          </div>
+        </div>
+        <div class="gallery-item cursor-pointer group relative aspect-[4/3] rounded-xl overflow-hidden" data-category="grades">
+          <img src="grades-01.jpg" alt="Grades de proteção - trabalho de serralheria" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+            <span class="text-white font-medium">Grades de proteção</span>
+          </div>
+        </div>
+        <div class="gallery-item gallery-video cursor-pointer group relative aspect-[4/3] rounded-xl overflow-hidden" data-category="grades" data-video="grades-01.mp4">
+          <img src="grades-01-thumb.jpg" alt="Grades de proteção - trabalho de serralheria" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+            <div class="w-14 h-14 rounded-full bg-gold/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-black ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 pointer-events-none">
+            <span class="text-white font-medium">Grades de proteção</span>
+          </div>
+        </div>
+        <div class="gallery-item gallery-video cursor-pointer group relative aspect-[4/3] rounded-xl overflow-hidden" data-category="grades" data-video="grades-02.mp4">
+          <img src="grades-02-thumb.jpg" alt="Grades de proteção - trabalho de serralheria" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+            <div class="w-14 h-14 rounded-full bg-gold/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-black ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 pointer-events-none">
+            <span class="text-white font-medium">Grades de proteção</span>
+          </div>
+        </div>
+        <div class="gallery-item gallery-video cursor-pointer group relative aspect-[4/3] rounded-xl overflow-hidden" data-category="grades" data-video="grades-03.mp4">
+          <img src="grades-03-thumb.jpg" alt="Grades de proteção - trabalho de serralheria" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+            <div class="w-14 h-14 rounded-full bg-gold/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-black ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 pointer-events-none">
+            <span class="text-white font-medium">Grades de proteção</span>
+          </div>
+        </div>
+        <div class="gallery-item gallery-video cursor-pointer group relative aspect-[4/3] rounded-xl overflow-hidden" data-category="estruturas" data-video="estruturas-01.mp4">
+          <img src="estruturas-01-thumb.jpg" alt="Estruturas metálicas - trabalho de serralheria" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+            <div class="w-14 h-14 rounded-full bg-gold/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-black ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 pointer-events-none">
+            <span class="text-white font-medium">Estruturas metálicas</span>
+          </div>
+        </div>
+        <div class="gallery-item gallery-video cursor-pointer group relative aspect-[4/3] rounded-xl overflow-hidden" data-category="estruturas" data-video="estruturas-02.mp4">
+          <img src="estruturas-02-thumb.jpg" alt="Estruturas metálicas - trabalho de serralheria" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+            <div class="w-14 h-14 rounded-full bg-gold/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-black ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 pointer-events-none">
+            <span class="text-white font-medium">Estruturas metálicas</span>
+          </div>
+        </div>
+        <div class="gallery-item gallery-video cursor-pointer group relative aspect-[4/3] rounded-xl overflow-hidden" data-category="estruturas" data-video="estruturas-03.mp4">
+          <img src="estruturas-03-thumb.jpg" alt="Estruturas metálicas - trabalho de serralheria" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+            <div class="w-14 h-14 rounded-full bg-gold/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-black ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 pointer-events-none">
+            <span class="text-white font-medium">Estruturas metálicas</span>
+          </div>
+        </div>
+        <div class="gallery-item gallery-video cursor-pointer group relative aspect-[4/3] rounded-xl overflow-hidden" data-category="outros" data-video="outros-01.mp4">
+          <img src="outros-01-thumb.jpg" alt="Outros trabalhos - trabalho de serralheria" class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+            <div class="w-14 h-14 rounded-full bg-gold/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-black ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 pointer-events-none">
+            <span class="text-white font-medium">Outros trabalhos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox fixed inset-0 z-[100] bg-black/95 items-center justify-center p-4">
+    <button id="lightbox-close" class="absolute top-6 right-6 text-white hover:text-gold p-2 z-10" aria-label="Fechar">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <img id="lightbox-img" src="" alt="Visualização ampliada" class="max-w-full max-h-[90vh] object-contain rounded-lg hidden">
+    <video id="lightbox-video" class="max-w-full max-h-[90vh] object-contain rounded-lg hidden" controls playsinline></video>
+  </div>
+
+  <!-- ========== SOBRE ========== -->
+  <section id="empresa" class="relative py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-gold/20 shadow-2xl shadow-gold/10">
+            <img src="bg-esmerilhamento.png" 
+                 alt="Trabalho de esmerilhamento na Metalúrgica do Maurição" 
+                 class="w-full h-full object-cover object-center">
+          </div>
+          <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-gold to-fire-orange rounded-xl opacity-20 blur-2xl"></div>
+        </div>
+        <div>
+          <span class="text-gold text-sm font-semibold tracking-widest uppercase">Quem somos</span>
+          <h2 class="font-display text-3xl md:text-4xl font-bold text-white mt-2 mb-6 leading-tight">
+            METALÚRGICA DO MAURIÇÃO:<br>
+            <span class="text-gold-light">SOLUÇÕES EM METAL PARA O SEU PROJETO</span>
+          </h2>
+          <div class="space-y-4 text-gray-300 leading-relaxed">
+            <p>Na Metalúrgica do Maurição, cada projeto começa com a necessidade do cliente. Nosso objetivo é oferecer soluções em metal que aliem funcionalidade, resistência e cuidado no acabamento.</p>
+            <p>Trabalhamos com serviços de metalúrgica e serralheria conforme as necessidades de cada projeto, buscando oferecer um atendimento próximo e soluções adequadas a diferentes ambientes.</p>
+            <p>Seja para um projeto residencial, comercial ou outra aplicação compatível com nossos serviços, entre em contato para conversar sobre sua necessidade e solicitar um orçamento.</p>
+          </div>
+          <a href="https://wa.me/5577998208831?text=Ol%C3%A1!%20Conheci%20o%20site%20da%20Metal%C3%BArgica%20do%20Mauri%C3%A7%C3%A3o%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." 
+             target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 mt-8 px-6 py-3 bg-gradient-to-r from-gold to-fire-orange text-black font-display font-semibold rounded-md hover:shadow-lg hover:shadow-gold/30 transition-all">
+            FALE CONOSCO
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COMO FUNCIONA ========== -->
+  <section class="relative py-20 md:py-28 bg-graphite border-y border-gold/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="text-gold text-sm font-semibold tracking-widest uppercase">Processo</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-white mt-2">COMO FUNCIONA</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="relative text-center">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-gradient-to-br from-gold to-fire-orange flex items-center justify-center font-display text-2xl font-bold text-black shadow-lg shadow-gold/30">01</div>
+          <h3 class="font-display text-lg font-semibold text-white mb-2">Entre em contato</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">Explique o que você precisa e, se possível, envie fotos ou referências.</p>
+        </div>
+        <div class="relative text-center">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-gradient-to-br from-gold to-fire-orange flex items-center justify-center font-display text-2xl font-bold text-black shadow-lg shadow-gold/30">02</div>
+          <h3 class="font-display text-lg font-semibold text-white mb-2">Avaliação do projeto</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">A empresa analisa a solicitação e verifica as informações necessárias para elaborar a proposta.</p>
+        </div>
+        <div class="relative text-center">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-gradient-to-br from-gold to-fire-orange flex items-center justify-center font-display text-2xl font-bold text-black shadow-lg shadow-gold/30">03</div>
+          <h3 class="font-display text-lg font-semibold text-white mb-2">Orçamento</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">As condições do serviço são avaliadas para apresentar um orçamento personalizado.</p>
+        </div>
+        <div class="relative text-center">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-gradient-to-br from-gold to-fire-orange flex items-center justify-center font-display text-2xl font-bold text-black shadow-lg shadow-gold/30">04</div>
+          <h3 class="font-display text-lg font-semibold text-white mb-2">Execução</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">Após a aprovação, o serviço é realizado conforme o escopo e os prazos acordados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ORÇAMENTO ========== -->
+  <section class="relative py-20 md:py-28 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="bg-soldagem-carreta.png" 
+           alt="Soldagem em carreta / estrutura" 
+           class="w-full h-full object-cover object-center opacity-35">
+      <div class="absolute inset-0 bg-gradient-to-r from-industrial-black via-industrial-black/90 to-industrial-black/80"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-industrial-black/80 via-transparent to-industrial-black/50"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+        TEM UM PROJETO EM METAL?<br>
+        <span class="text-gold-gradient">FALE COM A METALÚRGICA DO MAURIÇÃO!</span>
+      </h2>
+      <p class="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">Entre em contato, apresente sua ideia e solicite um orçamento para o serviço que você precisa.</p>
+      <a href="https://wa.me/5577998208831?text=Ol%C3%A1!%20Conheci%20o%20site%20da%20Metal%C3%BArgica%20do%20Mauri%C3%A7%C3%A3o%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." 
+         target="_blank" rel="noopener"
+         class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-gold to-fire-orange text-black font-display font-bold text-lg tracking-wide rounded-md hover:shadow-2xl hover:shadow-gold/40 transition-all">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        PEDIR ORÇAMENTO PELO WHATSAPP
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== FORMULÁRIO + FAQ ========== -->
+  <section id="contato" class="relative py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        
+        <!-- Formulário -->
+        <div>
+          <span class="text-gold text-sm font-semibold tracking-widest uppercase">Contato</span>
+          <h2 class="font-display text-3xl md:text-4xl font-bold text-white mt-2 mb-6">SOLICITE SEU ORÇAMENTO</h2>
+          <p class="text-gray-400 mb-8">Preencha o formulário e entraremos em contato. Ou fale diretamente pelo WhatsApp.</p>
+          
+          <form id="contact-form" class="space-y-5">
+            <div>
+              <label for="nome" class="block text-sm font-medium text-gray-300 mb-1.5">Nome *</label>
+              <input type="text" id="nome" name="nome" required
+                     class="w-full px-4 py-3 bg-metal-gray border border-steel rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gold transition-colors"
+                     placeholder="Seu nome completo">
+            </div>
+            <div>
+              <label for="whatsapp" class="block text-sm font-medium text-gray-300 mb-1.5">WhatsApp *</label>
+              <input type="tel" id="whatsapp" name="whatsapp" required
+                     class="w-full px-4 py-3 bg-metal-gray border border-steel rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gold transition-colors"
+                     placeholder="(77) 9 0000-0000">
+            </div>
+            <div>
+              <label for="servico" class="block text-sm font-medium text-gray-300 mb-1.5">Serviço desejado *</label>
+              <select id="servico" name="servico" required
+                      class="w-full px-4 py-3 bg-metal-gray border border-steel rounded-lg text-white focus:outline-none focus:border-gold transition-colors">
+                <option value="">Selecione um serviço</option>
+                <option value="Carretinhas">Fabricação de Carretinhas</option>
+                <option value="Portões">Portões sob medida</option>
+                <option value="Grades">Grades de proteção</option>
+                <option value="Escadas">Escadas metálicas</option>
+                <option value="Corrimãos">Corrimãos e Guarda-corpos</option>
+                <option value="Estruturas">Estruturas metálicas</option>
+                <option value="Soldas">Soldas e Reparos</option>
+                <option value="Outro">Outro / Projeto especial</option>
+              </select>
+            </div>
+            <div>
+              <label for="descricao" class="block text-sm font-medium text-gray-300 mb-1.5">Descrição do projeto *</label>
+              <textarea id="descricao" name="descricao" rows="3" required
+                        class="w-full px-4 py-3 bg-metal-gray border border-steel rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gold transition-colors resize-none"
+                        placeholder="Descreva o que você precisa..."></textarea>
+            </div>
+            <div>
+              <label for="cidade" class="block text-sm font-medium text-gray-300 mb-1.5">Cidade ou bairro</label>
+              <input type="text" id="cidade" name="cidade"
+                     class="w-full px-4 py-3 bg-metal-gray border border-steel rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gold transition-colors"
+                     placeholder="Ex: Recanto dos Pássaros">
+            </div>
+            <div>
+              <label for="obs" class="block text-sm font-medium text-gray-300 mb-1.5">Observações adicionais</label>
+              <textarea id="obs" name="obs" rows="2"
+                        class="w-full px-4 py-3 bg-metal-gray border border-steel rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-gold transition-colors resize-none"
+                        placeholder="Medidas, referências, etc."></textarea>
+            </div>
+            <button type="submit"
+                    class="w-full px-6 py-4 bg-gradient-to-r from-gold to-fire-orange text-black font-display font-bold text-base tracking-wide rounded-md hover:shadow-lg hover:shadow-gold/30 transition-all">
+              SOLICITAR MEU ORÇAMENTO
+            </button>
+          </form>
+        </div>
+
+        <!-- FAQ -->
+        <div>
+          <span class="text-gold text-sm font-semibold tracking-widest uppercase">Dúvidas</span>
+          <h2 class="font-display text-3xl md:text-4xl font-bold text-white mt-2 mb-8">PERGUNTAS FREQUENTES</h2>
+          
+          <div class="space-y-3" id="faq-list">
+            <div class="faq-item border border-steel rounded-xl overflow-hidden">
+              <button class="faq-question w-full flex items-center justify-between p-5 text-left hover:bg-metal-gray/50 transition-colors">
+                <span class="font-medium text-white pr-4">Quais serviços a Metalúrgica do Maurição realiza?</span>
+                <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="faq-answer px-5 pb-0">
+                <p class="text-gray-400 text-sm pb-5 leading-relaxed">Realizamos fabricação de carretinhas, portões sob medida, grades de proteção, escadas metálicas, corrimãos, estruturas metálicas, soldas e reparos. Cada projeto é avaliado conforme a necessidade do cliente.</p>
+              </div>
+            </div>
+            <div class="faq-item border border-steel rounded-xl overflow-hidden">
+              <button class="faq-question w-full flex items-center justify-between p-5 text-left hover:bg-metal-gray/50 transition-colors">
+                <span class="font-medium text-white pr-4">Como posso solicitar um orçamento?</span>
+                <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="faq-answer px-5 pb-0">
+                <p class="text-gray-400 text-sm pb-5 leading-relaxed">Você pode preencher o formulário nesta página, clicar em qualquer botão de orçamento ou enviar uma mensagem pelo WhatsApp (77) 9 9820-8831. Quanto mais detalhes (fotos, medidas), melhor.</p>
+              </div>
+            </div>
+            <div class="faq-item border border-steel rounded-xl overflow-hidden">
+              <button class="faq-question w-full flex items-center justify-between p-5 text-left hover:bg-metal-gray/50 transition-colors">
+                <span class="font-medium text-white pr-4">Vocês fazem projetos sob medida?</span>
+                <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="faq-answer px-5 pb-0">
+                <p class="text-gray-400 text-sm pb-5 leading-relaxed">Sim. Todos os projetos são desenvolvidos de acordo com as necessidades e especificações de cada cliente.</p>
+              </div>
+            </div>
+            <div class="faq-item border border-steel rounded-xl overflow-hidden">
+              <button class="faq-question w-full flex items-center justify-between p-5 text-left hover:bg-metal-gray/50 transition-colors">
+                <span class="font-medium text-white pr-4">Posso enviar fotos e medidas pelo WhatsApp?</span>
+                <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="faq-answer px-5 pb-0">
+                <p class="text-gray-400 text-sm pb-5 leading-relaxed">Sim! Envie fotos, medidas e referências pelo WhatsApp. Isso ajuda a elaborar um orçamento mais preciso.</p>
+              </div>
+            </div>
+            <div class="faq-item border border-steel rounded-xl overflow-hidden">
+              <button class="faq-question w-full flex items-center justify-between p-5 text-left hover:bg-metal-gray/50 transition-colors">
+                <span class="font-medium text-white pr-4">Vocês atendem residências e empresas?</span>
+                <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="faq-answer px-5 pb-0">
+                <p class="text-gray-400 text-sm pb-5 leading-relaxed">Sim. Atendemos projetos residenciais, comerciais e outras aplicações compatíveis com nossos serviços de metalúrgica e serralheria.</p>
+              </div>
+            </div>
+            <div class="faq-item border border-steel rounded-xl overflow-hidden">
+              <button class="faq-question w-full flex items-center justify-between p-5 text-left hover:bg-metal-gray/50 transition-colors">
+                <span class="font-medium text-white pr-4">Qual é o prazo de execução de um serviço?</span>
+                <svg class="faq-icon w-5 h-5 text-gold flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="faq-answer px-5 pb-0">
+                <p class="text-gray-400 text-sm pb-5 leading-relaxed">O prazo varia de acordo com o tipo e a complexidade do projeto. Após a análise da solicitação, informamos o prazo estimado no orçamento.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RODAPÉ ========== -->
+  <footer class="bg-industrial-black border-t border-gold/20 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <!-- Brand -->
+        <div class="lg:col-span-1">
+          <div class="mb-4">
+            <img src="logo-mauricao.png" 
+                 alt="Metalúrgica Maurição" 
+                 class="h-16 w-auto object-contain">
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">Soluções em metal com qualidade, precisão e confiança. Portões, carretinhas, estruturas e muito mais.</p>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="font-display text-sm font-semibold text-gold tracking-wider uppercase mb-4">Navegação</h4>
+          <ul class="space-y-2">
+            <li><a href="#inicio" class="text-gray-400 hover:text-gold text-sm transition-colors">Início</a></li>
+            <li><a href="#empresa" class="text-gray-400 hover:text-gold text-sm transition-colors">A Empresa</a></li>
+            <li><a href="#servicos" class="text-gray-400 hover:text-gold text-sm transition-colors">Serviços</a></li>
+            <li><a href="#trabalhos" class="text-gray-400 hover:text-gold text-sm transition-colors">Nossos Trabalhos</a></li>
+            <li><a href="#contato" class="text-gray-400 hover:text-gold text-sm transition-colors">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Contato -->
+        <div>
+          <h4 class="font-display text-sm font-semibold text-gold tracking-wider uppercase mb-4">Contato</h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="https://wa.me/5577998208831" target="_blank" rel="noopener" class="flex items-center gap-2 text-gray-400 hover:text-gold text-sm transition-colors">
+                <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                (77) 9 9820-8831
+              </a>
+            </li>
+            <li class="flex items-start gap-2 text-gray-400 text-sm">
+              <svg class="w-4 h-4 text-gold mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Rua Andorinha, Qd. 32, Lt. 25, nº 241<br>Recanto dos Pássaros</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CTA -->
+        <div>
+          <h4 class="font-display text-sm font-semibold text-gold tracking-wider uppercase mb-4">Solicite orçamento</h4>
+          <p class="text-gray-400 text-sm mb-4">Transforme seu projeto em realidade. Fale conosco agora.</p>
+          <a href="https://wa.me/5577998208831?text=Ol%C3%A1!%20Conheci%20o%20site%20da%20Metal%C3%BArgica%20do%20Mauri%C3%A7%C3%A3o%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." 
+             target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-gold to-fire-orange text-black font-display font-semibold text-sm rounded-md hover:shadow-lg transition-all">
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="border-t border-steel/50 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-gray-500 text-sm">© 2026 Metalúrgica do Maurição. Todos os direitos reservados.</p>
+        <a href="#" class="text-gray-500 hover:text-gold text-sm transition-colors">Política de Privacidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/5577998208831?text=Ol%C3%A1!%20Conheci%20o%20site%20da%20Metal%C3%BArgica%20do%20Mauri%C3%A7%C3%A3o%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." 
+     target="_blank" rel="noopener"
+     class="whatsapp-float w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+     aria-label="WhatsApp">
+    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    // Mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function openMenu() {
+      mobileMenu.classList.add('open');
+      menuOverlay.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenuFn() {
+      mobileMenu.classList.remove('open');
+      menuOverlay.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+    menuBtn.addEventListener('click', openMenu);
+    closeMenu.addEventListener('click', closeMenuFn);
+    menuOverlay.addEventListener('click', closeMenuFn);
+    mobileLinks.forEach(link => link.addEventListener('click', closeMenuFn));
+
+    // Header scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('shadow-lg', 'shadow-black/50');
+      } else {
+        header.classList.remove('shadow-lg', 'shadow-black/50');
+      }
+    });
+
+    // Gallery filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('active', 'bg-gold/20', 'text-gold', 'border-gold/50');
+          b.classList.add('text-gray-400', 'border-steel');
+        });
+        btn.classList.add('active', 'bg-gold/20', 'text-gold', 'border-gold/50');
+        btn.classList.remove('text-gray-400', 'border-steel');
+        const filter = btn.dataset.filter;
+        galleryItems.forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Lightbox (fotos e vídeos)
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxVideo = document.getElementById('lightbox-video');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+      lightboxImg.classList.add('hidden');
+      lightboxImg.src = '';
+      if (lightboxVideo) {
+        lightboxVideo.classList.add('hidden');
+        lightboxVideo.pause();
+        lightboxVideo.removeAttribute('src');
+        lightboxVideo.load();
+      }
+    }
+
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const videoSrc = item.dataset.video;
+        if (videoSrc && lightboxVideo) {
+          lightboxImg.classList.add('hidden');
+          lightboxVideo.classList.remove('hidden');
+          lightboxVideo.src = videoSrc;
+          lightboxVideo.play();
+        } else {
+          const img = item.querySelector('img');
+          if (lightboxVideo) {
+            lightboxVideo.classList.add('hidden');
+            lightboxVideo.pause();
+          }
+          lightboxImg.classList.remove('hidden');
+          lightboxImg.src = img.src;
+        }
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Contact form -> WhatsApp
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value.trim();
+      const whatsapp = document.getElementById('whatsapp').value.trim();
+      const servico = document.getElementById('servico').value;
+      const descricao = document.getElementById('descricao').value.trim();
+      const cidade = document.getElementById('cidade').value.trim();
+      const obs = document.getElementById('obs').value.trim();
+
+      let msg = `Olá! Conheci o site da Metalúrgica do Maurição e gostaria de solicitar um orçamento.%0A%0A`;
+      msg += `*Nome:* ${nome}%0A`;
+      msg += `*WhatsApp:* ${whatsapp}%0A`;
+      msg += `*Serviço:* ${servico}%0A`;
+      msg += `*Descrição:* ${descricao}%0A`;
+      if (cidade) msg += `*Cidade/Bairro:* ${cidade}%0A`;
+      if (obs) msg += `*Observações:* ${obs}%0A`;
+
+      window.open(`https://wa.me/5577998208831?text=${msg}`, '_blank');
+    });
+  </script>
+</body>
+</html>
